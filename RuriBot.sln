@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuriBot.Library", "RuriBot.Library\RuriBot.Library.csproj", "{381D3E97-E7B3-4BA6-B7F0-BD82C8E1A814}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuriBot.Core", "RuriBot\RuriBot.Core.csproj", "{DD73E578-F48C-48F6-AF76-B43176309946}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuriBot.Runner", "RuriBot.Runner\RuriBot.Runner.csproj", "{C7A1B3D5-E8F9-4A2C-B6D0-1E3F5A7C9B2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RuriBot.DemoModule", "RuriBot.DemoModule\RuriBot.DemoModule.csproj", "{D8B2C4E6-F9A0-4B3D-C7E1-2F4A6B8D0C3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{DD73E578-F48C-48F6-AF76-B43176309946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD73E578-F48C-48F6-AF76-B43176309946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD73E578-F48C-48F6-AF76-B43176309946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A1B3D5-E8F9-4A2C-B6D0-1E3F5A7C9B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A1B3D5-E8F9-4A2C-B6D0-1E3F5A7C9B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A1B3D5-E8F9-4A2C-B6D0-1E3F5A7C9B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A1B3D5-E8F9-4A2C-B6D0-1E3F5A7C9B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B2C4E6-F9A0-4B3D-C7E1-2F4A6B8D0C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B2C4E6-F9A0-4B3D-C7E1-2F4A6B8D0C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B2C4E6-F9A0-4B3D-C7E1-2F4A6B8D0C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B2C4E6-F9A0-4B3D-C7E1-2F4A6B8D0C3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

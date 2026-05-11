@@ -15,6 +15,7 @@ using NapCatSharpLib.Log;
 using NapCatSharpLib.Data;
 using RuriBot.Library.Module;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RuriBot.Core
 {
@@ -132,11 +133,13 @@ namespace RuriBot.Core
 
         public RRBotCore(string _ip, int _port, IRRBotLogger _logger = null)
         {
-            webSocket = new NapCatWebSocket(_ip, _port);
+            coreLogger = _logger;
+
+            // 启用 WebSocket 原始数据调试输出
+            var debugOutput = new DebugWSOutput(coreLogger);
+            webSocket = new NapCatWebSocket(_ip, _port, debugOutput);
             api = new NapCatAPI(webSocket);
             apiAdvanced = new NapCatAPIAdvanced(webSocket);
-
-            coreLogger = _logger;
 
             commandManager = new CommandManager();
             eventManager = new EventManager(webSocket.EventManager);
@@ -182,6 +185,13 @@ namespace RuriBot.Core
             moduleManager.LoadModules();
 
             OutputBotLog("Ruri-Bot", "模块初始化完成");
+        }
+
+        public bool IsConnected => webSocket?.IsConnected ?? false;
+
+        public async Task<NapCatAPIDataLoginInfo> GetLoginInfoAsync()
+        {
+            return await api.GetLoginInfo();
         }
 
         public void Start()

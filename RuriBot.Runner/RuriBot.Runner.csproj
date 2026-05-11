@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RuriBot\RuriBot.Core.csproj" />
+    <ProjectReference Include="..\RuriBot.Library\RuriBot.Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NapCatSharpLib">
+      <HintPath>..\..\NapCatSharpLib\NapCatSharpLib\bin\Debug\netstandard2.0\NapCatSharpLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- 将 data 和 modules 目录复制到输出目录 -->
+  <ItemGroup>
+    <None Include="..\data\**\*" CopyToOutputDirectory="PreserveNewest" LinkBase="data\" />
+    <None Include="..\modules\**\*.dll" CopyToOutputDirectory="PreserveNewest" LinkBase="modules\" />
+  </ItemGroup>
+
+</Project>

@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <Reference Include="NapCatSharpLib">
-      <HintPath>..\..\NapCatSharpLib\NapCatSharpLib\bin\Release\netstandard2.0\NapCatSharpLib.dll</HintPath>
+      <HintPath>..\..\NapCatSharpLib\NapCatSharpLib\bin\Debug\netstandard2.0\NapCatSharpLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 
